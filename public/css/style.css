@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import "navbar.css";
+@import "footer.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --dark-color: #1a1a1a;
+  --light-dark-color: #3c3c3c;
+  --light-gray-color: #f3f3f3;
+  --primary-color: #00cf61;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1280px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* header-section */
+.header-section {
+  flex-grow: 1;
+  padding: 5rem 0;
+  height: 100%;
+}
+
+.header-section > .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content-container {
+  max-width: 70rem;
+  text-align: center;
+}
+
+.header-content-container > h2 {
+  font-family: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: var(--light-dark-color);
+}
+
+.header-content-container > h1 {
+  font-size: 5rem;
+  text-transform: capitalize;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.header-content-container > h1 > span {
+  color: var(--primary-color);
+}
+
+.header-content-container > a:link,
+.header-content-container > a:visited {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  color: var(--dark-color);
+  border: 2px solid var(--dark-color);
+  background: transparent;
+  padding: 0.8rem 3rem;
+  position: relative;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.header-content-container > a:hover,
+.header-content-container > a:active {
+  color: var(--light-gray-color);
+}
+
+.header-content-container > a:link::before,
+.header-content-container > a:visited::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--dark-color);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.header-content-container > a:hover::before,
+.header-content-container > a:active::before {
+  width: 100%;
+}
+
+/* weather section */
+.weather-section {
+  padding: 5rem 0;
+  flex-grow: 1;
+}
+
+.weather-section > .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-section > .container .weather-container {
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: var(--dark-color);
+  max-width: 60rem;
+  width: 100%;
+}
+
+.weather-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.weather-form .weather-input {
+  font-family: inherit;
+  display: inline-block;
+  flex-grow: 1;
+  min-width: 0;
+  font-size: 2.2rem;
+  color: var(--dark-color);
+  padding: 0.5rem 2rem;
+  border-radius: 50rem;
+  border: none;
+  outline: none;
+}
+
+.weather-form .weather-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: var(--light-gray-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.weather-form .weather-icon-container .weather-icon {
+  font-size: 2.5rem;
+  color: var(--dark-color-color);
+}
+
+.weather-result {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.weather-result > h1 {
+  color: var(--light-gray-color);
+  font-size: 3.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.weather-result .weather-temp {
+  color: var(--light-gray-color);
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.weather-type {
+  margin-top: 1rem;
+  color: var(--light-gray-color);
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.weather-humidity {
+  color: var(--light-gray-color);
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.weather-wind {
+  margin-top: -0.5rem;
+  color: var(--light-gray-color);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* about-section */
+.about-section {
+  flex-grow: 1;
+  padding: 5rem 0;
+  height: 100%;
+}
+
+.about-section > .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.about-content-container {
+  text-align: center;
+  max-width: 80rem;
+}
+
+.about-content-container > p {
+  font-size: 1.6rem;
+  color: var(--light-dark-color);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.about-content-container > h1 {
+  font-size: 5rem;
+  text-transform: capitalize;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.about-content-container > h1 > span {
+  color: var(--primary-color);
+}
+
+.about-content-container > a:link,
+.about-content-container > a:visited {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  color: var(--dark-color);
+  border: 2px solid var(--dark-color);
+  background: transparent;
+  padding: 0.8rem 3rem;
+  position: relative;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.about-content-container > a:hover,
+.about-content-container > a:active {
+  color: var(--light-gray-color);
+}
+
+.about-content-container > a:link::before,
+.about-content-container > a:visited::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--dark-color);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.about-content-container > a:hover::before,
+.about-content-container > a:active::before {
+  width: 100%;
+}
+
+/* error-section */
+.error-section {
+  flex-grow: 1;
+  padding: 0rem 0 3rem 0;
+}
+
+.error-section > .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.error-section > .container img {
+  height: auto;
+  max-width: 55rem;
+  width: 100%;
+}
+.error-section > .container > a:link,
+.error-section > .container > a:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: var(--dark-color);
+  border: 2px solid var(--dark-color);
+  background: transparent;
+  padding: 0.8rem 2.5rem;
+  position: relative;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.error-section > .container > a:hover,
+.error-section > .container > a:active {
+  color: var(--light-gray-color);
+}
+
+.error-section > .container > a:link::before,
+.error-section > .container > a:visited::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--dark-color);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.error-section > .container > a:hover::before,
+.error-section > .container > a:active::before {
+  width: 100%;
+}
+
+/* media queries */
+
+@media (max-width: 950px) {
+  .header-content-container > h1 {
+    font-size: 4rem;
+  }
+  .header-content-container > a:link,
+  .header-content-container > a:visited {
+    padding: 0.6rem 2rem;
+    font-size: 1.4rem;
+  }
+
+  .about-content-container > h1 {
+    font-size: 4rem;
+  }
+  .about-content-container > a:link,
+  .about-content-container > a:visited {
+    padding: 0.6rem 2rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content-container {
+    max-width: 43rem;
+  }
+  .header-content-container > h1 {
+    font-size: 3rem;
+  }
+
+  .weather-form .weather-input {
+    font-size: 2rem;
+    padding: 0.4rem 2rem;
+  }
+
+  .weather-form .weather-icon-container {
+    width: 4rem;
+    height: 4rem;
+  }
+  .weather-form .weather-icon-container .weather-icon {
+    font-size: 2rem;
+  }
+  .weather-result > h1 {
+    font-size: 3rem;
+  }
+  .weather-result .weather-temp {
+    font-size: 2rem;
+  }
+  .weather-type {
+    font-size: 1.8rem;
+  }
+
+  .about-content-container {
+    max-width: 50rem;
+  }
+  .about-content-container > h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .header-content-container > h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-content-container > h1 {
+    font-size: 2.5rem;
+  }
+}

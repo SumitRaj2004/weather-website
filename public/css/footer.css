@@ -1,0 +1,11 @@
+.footer-section {
+  padding: 1rem 0;
+  background: var(--dark-color);
+}
+
+.footer-section .container > p {
+  color: var(--light-gray-color);
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+}
