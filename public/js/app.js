@@ -21,7 +21,7 @@ weatherForm.addEventListener("submit", (e) => {
 const getWeather = async (location) => {
   const apiKey = "732ba9f00044ab072864a6bf6f7aa06a";
   const res = await fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=${apiKey}`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=${apiKey}`
   );
   const data = await res.json();
   const lat = data[0].lat;
