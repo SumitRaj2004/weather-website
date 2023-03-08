@@ -32,9 +32,3 @@ app.get("*", (req, res) => {
 app.listen(port, () => {
   console.log("server is listening the request on port 3000");
 });
-
-// files in green are those which have not been commited yet alright
-
-// vs code hides the dir by default
-// we wanted to see what's inside theri
-console.log("something is changed alrigth for testing git");
